@@ -6,7 +6,7 @@ import ProjectsPage from "./pages/projects";
 
 function App() {
   return (
-    <div className="dark:bg-[#0F172A] text-sm lg:text-base dark:text-white bg-white scroll-smooth">
+    <div className="dark:bg-[#0F172A] text-sm md:text-base dark:text-white bg-white scroll-smooth">
       <Navbar />
       <Router>
         <Routes>

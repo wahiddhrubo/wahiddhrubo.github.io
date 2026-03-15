@@ -139,7 +139,7 @@ export default function Hero() {
 
         <div className="flex  flex-col gap-y-8">
           <div className=" flex gap-5 items-center font-bold text-xl">
-            <div className="hover:scale-125 hover:ease-linear hover:duration-200 shadow-xl  w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
+            <div className="hover:scale-125 hover:ease-linear hover:duration-200   w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
               <IdCardIcon className="text-primary  text-12" size={24} />
             </div>
             Bio
@@ -151,7 +151,7 @@ export default function Hero() {
             Download CV
           </div>
           <div className=" flex gap-5 items-center mt-10 font-bold text-xl">
-            <div className="hover:scale-125 hover:ease-linear hover:duration-200 shadow-xl  w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
+            <div className="hover:scale-125 hover:ease-linear hover:duration-200   w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
               <GraduationCapIcon className="text-primary  text-12" size={24} />
             </div>
             Education
@@ -182,7 +182,7 @@ export default function Hero() {
             ))}
           </div>
           <div className=" flex gap-5 mt-10 items-center font-bold text-xl">
-            <div className="hover:scale-125 hover:ease-linear hover:duration-200 shadow-xl  w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
+            <div className="hover:scale-125 hover:ease-linear hover:duration-200  w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
               <Stars className="text-primary  text-12" size={24} />
             </div>
             Interest
