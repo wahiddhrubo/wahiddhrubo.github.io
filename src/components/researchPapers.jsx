@@ -18,18 +18,18 @@ export default function ResearchPapers() {
       </div>
 
       {types.map((t, index) => (
-        <div className=" my-10">
-          <div className="text-xl italic ">{t}</div>
+        <div className=" my-10 ">
+          <div className="lg:text-xl text-base italic ">{t}</div>
           {papers
             .filter((p) => p.type === t)
             .map((paper, index) => (
               <div className={` my-4 ${paper?.featured && "featured-paper"}`}>
                 <Link
                   to={`/papers/${paper.id}`}
-                  className="underline flex gap-4 items-center font-semibold  dark:text-white  hover:text-primary text-lg italic"
+                  className="underline flex gap-4 items-center font-semibold  dark:text-white  hover:text-primary lg:text-lg text-base italic"
                 >
                   {paper.title}
-                  <LinkIcon size={20} />
+                  <LinkIcon size={20} className="hidden lg:block" />
                 </Link>
                 <div className=" dark:text-white  my-2 font-bold text-base">
                   {paper.venue}

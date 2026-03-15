@@ -1,6 +1,7 @@
 import React from "react";
 import { name } from "../data/profile.json";
 import DarkModeBtn from "./darkModeBtn";
+import { HamburgerIcon } from "lucide-react";
 
 function Navbar() {
   const links = [
@@ -13,13 +14,13 @@ function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 w-full bg-primary-bg-dark  text-white  px-12 py-8 shadow-lg z-[100]">
+    <div className="fixed top-0 w-full bg-primary-bg-dark  text-white  lg:px-12 px-10 py-8 shadow-lg z-[100]">
       <div className="flex items-center max-w-6xl mx-auto">
         {/* Logo / Name */}
-        <div className="mr-auto text-2xl font-semibold">{name}</div>
+        <div className="mr-auto md:text-2xl text-lg font-semibold">{name}</div>
 
         {/* Links */}
-        <div className="flex gap-8 w-fit mx-auto text-sm">
+        <div className="md:flex hidden gap-8 w-fit mx-auto text-sm">
           {links.map((link, index) => (
             <a
               key={index}

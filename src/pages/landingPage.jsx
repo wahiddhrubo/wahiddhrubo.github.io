@@ -17,7 +17,7 @@ export default function LandingPage() {
         <Hero />
       </section>
 
-      <div className=" p-20 w-3/4 space-y-28 mx-auto">
+      <div className=" lg:p-20 lg:w-3/4 p-12 space-y-12 lg:space-y-28 mx-auto">
         {/* NEWS SECTION */}
         <section id="news">
           <News />

@@ -56,14 +56,14 @@ export default function Hero() {
     "Deep Learning",
   ];
   return (
-    <section className="w-screen relative py-24 flex p-20  gap-20   ">
+    <section className="w-screen relative py-24 flex md:p-20  gap-20   ">
       <div className="absolute inset-0 ">
         <div className="absolute inset-0 bg-gradient-to-br dark:from-primary/20 from-primary/10 via-transparent dark:to-secondary/20 to-secondary/10"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 dark:bg-primary/20 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute delay-[2s] bottom-0 right-1/4 w-96 h-96 dark:bg-secondary/20 bg-secondary/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 left-1/4 lg:w-96 w-40 lg:h-96 h-40 dark:bg-primary/20 bg-primary/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute delay-[2s] bottom-0 right-1/4 lg:w-96 w-40 lg:h-96 h-40 dark:bg-secondary/20 bg-secondary/10 rounded-full filter blur-3xl animate-pulse"></div>
       </div>
-      <div className="flex z-50 py-24    flex-wrap lg:flex-nowrap gap-10 px-10 mx-auto ">
-        <div className="space-y-6 w-1/3">
+      <div className="flex z-50 py-24    flex-wrap lg:flex-nowrap gap-10  px-10 mx-auto ">
+        <div className="space-y-6 lg:w-1/3 w-full">
           <div className="flex items-center space-y-4 gap-4 w-64 h-64 overflow-hidden  rounded-full border-4 border-white ">
             <img
               src="/images/profile.png"
@@ -82,7 +82,7 @@ export default function Hero() {
             >
               Computational Intelligence and Operations Laboratory (CIOL){" "}
             </a>
-            <div className="flex my-4 gap-4 text-gray-300">
+            <div className="flex flex-wrap my-4 gap-4 text-gray-300">
               <a
                 target="_blank"
                 href={`mailto:${emailAddress}`}
@@ -137,7 +137,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-y-8">
+        <div className="flex  flex-col gap-y-8">
           <div className=" flex gap-5 items-center font-bold text-xl">
             <div className="hover:scale-125 hover:ease-linear hover:duration-200 shadow-xl  w-12 flex items-center justify-center h-12 rounded-full shadow-xl dark:bg-[#2b80ff4b] ">
               <IdCardIcon className="text-primary  text-12" size={24} />
@@ -157,9 +157,9 @@ export default function Hero() {
             Education
           </div>
 
-          <div className="flex items-stretch  gap-4">
+          <div className="flex items-stretch flex-wrap  gap-4">
             {educations.map((e) => (
-              <div className=" flex bg-gradient-to-br  from-white/90 to-blue-50/30 dark:from-primary-bg-dark/90 dark:to-black/20  shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 backdrop-blur-md gap-2  items-center rounded-xl w-72 p-5 ">
+              <div className=" flex bg-gradient-to-br  from-white/90 to-blue-50/30 dark:from-primary-bg-dark/90 dark:to-black/20  shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 backdrop-blur-md gap-2  items-center rounded-xl md:w-72 w-full p-5 ">
                 <div className="mb-auto w-12 h-12 justify-center items-center  flex rounded-full bg-white dark:bg-primary-bg-dark ">
                   <GraduationCapIcon
                     color="#2b7fff"
@@ -189,7 +189,7 @@ export default function Hero() {
           </div>
           <div className="flex flex-wrap gap-3">
             {interests.map((interest) => (
-              <div className="p-2 px-4 rounded-full bg-white hover:text-white dark:bg-primary-bg-dark hover:bg-primary">
+              <div className="p-2 px-4 text-xs md:text-base rounded-full bg-white hover:text-white dark:bg-primary-bg-dark hover:bg-primary">
                 {interest}
               </div>
             ))}

@@ -44,7 +44,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <div className="fixed flex flex-col space-y-4 top-1/2 left-5 w-fit shadow-2xl -translate-y-1/2 p-6  border border-primary ">
+      <div className="fixed md:flex hidden flex-col space-y-4 top-1/2 left-5 w-fit shadow-2xl -translate-y-1/2 p-6  border border-primary ">
         {sections.map((section) => (
           <a
             className=" hover:text-primary font-semibold text-lg "
@@ -54,29 +54,31 @@ export default function ProjectsPage() {
           </a>
         ))}
       </div>
-      <div className="p-20 pt-44 w-3/4 space-y-8 mx-auto">
+      <div className="lg:p-20 p-10 pt-44 lg:w-3/4 space-y-8 mx-auto">
         <div>
           <Link
             to={"/"}
-            className="rounded-full border-1 w-24 flex items-center justify-center mb-16 h-24 shadow-lg hover:shadow-xl hover:border-primary hover:text-primary "
+            className="rounded-full border-1 lg:w-24 w-12  flex items-center justify-center mb-16 lg:h-24 h-12  shadow-lg hover:shadow-xl hover:border-primary hover:text-primary "
           >
-            <BsArrowLeft size={42} />
+            <BsArrowLeft className="lg:text-5xl text-2xl" />
           </Link>
           <img className="w-full h-fit " src={`/images/${project.thumbnail}`} />
-          <div className="text-3xl font-bold italic my-8 ">{project?.name}</div>
-          <div className=" text-primary flex gap-5 font-bold my-4 text-base">
+          <div className="md:text-3xl text-lg font-bold italic my-8 ">
+            {project?.name}
+          </div>
+          <div className=" text-primary flex gap-5 font-bold my-4 lg:text-base">
             {" "}
             Publised in {project?.venue}
           </div>
         </div>
         <div>
-          <div className="italic text-lg flex flex-wrap gap-2">
+          <div className="italic lg:text-lg flex flex-wrap gap-2">
             Skills : {project?.skills}
           </div>
           <div></div>
         </div>
         <div>
-          <div id="summary" className="text-lg font-semibold">
+          <div id="summary" className="lg:text-lg text-base font-semibold">
             Summary
           </div>
           <div className="text-justify leading-loose">

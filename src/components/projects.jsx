@@ -13,22 +13,11 @@ export default function Projects() {
         </div>
         Projects
       </div>
-      <div className="flex justify-between  flex-wrap">
-        {[
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-          ...projects,
-        ].map((project, index) => (
+      <div className="flex md:justify-between justify-center flex-wrap">
+        {projects.map((project, index) => (
           <Link className="my-10" to={`/projects/${project.id}`}>
             <div
-              className={` group w-[285px] py-8 shadow-xl p-4 rounded-md  border-2 border-primary  ${project?.featured && "featured-project"}`}
+              className={` group lg:w-[285px] w-60  py-8 shadow-xl p-4 rounded-md  border-2 border-primary  ${project?.featured && "featured-project"}`}
             >
               <img
                 className="w-60 h-48 mx-auto object-contain"

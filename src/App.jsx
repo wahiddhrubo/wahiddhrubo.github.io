@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/landingPage";
 import PapersPage from "./pages/papers";
 import Navbar from "./components/navbar";
@@ -6,7 +6,7 @@ import ProjectsPage from "./pages/projects";
 
 function App() {
   return (
-    <div className="dark:bg-[#0F172A] dark:text-white bg-white scroll-smooth">
+    <div className="dark:bg-[#0F172A] text-sm lg:text-base dark:text-white bg-white scroll-smooth">
       <Navbar />
       <Router>
         <Routes>

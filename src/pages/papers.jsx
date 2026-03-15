@@ -32,15 +32,17 @@ export default function PapersPage() {
   )[0];
 
   return (
-    <div className="p-20 pt-44 w-3/4 space-y-16 mx-auto">
+    <div className="lg:p-20 p-10 pt-44 lg:w-3/4 md:space-y-16 space-y-8 mx-auto">
       <div>
         <Link
           to={"/"}
-          className="rounded-full border-1 w-24 flex items-center justify-center mb-16 h-24 shadow-lg hover:shadow-xl hover:border-primary hover:text-primary "
+          className="rounded-full border-1 lg:w-24 w-12  flex items-center justify-center mb-16 lg:h-24 h-12  shadow-lg hover:shadow-xl hover:border-primary hover:text-primary "
         >
-          <BsArrowLeft size={42} />
+          <BsArrowLeft className="lg:text-5xl text-2xl" />
         </Link>
-        <div className="text-3xl font-bold italic ">{paper.title}</div>
+        <div className="md:text-3xl text-lg font-bold italic ">
+          {paper.title}
+        </div>
         <div className=" text-primary flex gap-5 font-semibold my-4 text-base">
           {" "}
           {paper.inReview
@@ -49,7 +51,7 @@ export default function PapersPage() {
         </div>
       </div>
       <div>
-        <div className="italic text-lg flex flex-wrap gap-1">
+        <div className="italic md:text-lg text-xs flex flex-wrap gap-1">
           {paper.authors.split(",").map((auth, index) => {
             const trimmed = auth.trim();
             const isBold = trimmed.toLowerCase() === name.toLowerCase();
@@ -76,11 +78,11 @@ export default function PapersPage() {
           View Paper <BsBoxArrowUpRight size={24} />
         </a>
       </div>
-      <div className=" flex justify-between ">
+      <div className=" flex flex-wrap space-y-8 justify-between ">
         {prevPaper && (
           <Link
             to={`/papers/${prevPaper.id}`}
-            className=" hover:text-primary mr-auto hover:-translate-x-5 hover:ease-in-out hover:duration-150 flex items-center gap-2 w-1/3"
+            className=" hover:text-primary text-sm mr-auto hover:-translate-x-5 hover:ease-in-out hover:duration-150 flex items-center gap-2 w-full md:w-1/3"
           >
             <BsArrowLeft size={48} />
             <div>
@@ -94,7 +96,7 @@ export default function PapersPage() {
         {nextPaper && (
           <Link
             to={`/papers/${nextPaper.id}`}
-            className=" hover:text-primary hover:translate-x-5 ml-auto hover:ease-in-out hover:duration-150 flex items-center gap-2 w-1/3"
+            className=" hover:text-primary text-sm hover:translate-x-5 ml-auto hover:ease-in-out hover:duration-150 flex items-center gap-2 w-full md:w-1/3"
           >
             <div className="">
               {nextPaper.title} <br />

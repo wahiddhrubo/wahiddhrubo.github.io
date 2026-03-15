@@ -25,7 +25,7 @@ export default function News() {
       <div>
         {newsList.map((news) => (
           <>
-            <div className="my-6  text-base  dark:text-white ">
+            <div className="my-6  md:text-base text-justify  dark:text-white ">
               <strong className="text-primary  ">{news.date} </strong> :{" "}
               {news.news}
             </div>
